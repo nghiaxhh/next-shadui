@@ -1,0 +1,27 @@
+textarea {
+  overflow-y: auto;
+  max-height: 120px;
+}
+
+::-webkit-input-placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+:-ms-input-placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

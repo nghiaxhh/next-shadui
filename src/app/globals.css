@@ -1,7 +1,14 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 @custom-variant dark (&:is(.dark *));
+
+* {
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+}
 
 @theme inline {
   --color-background: var(--background);

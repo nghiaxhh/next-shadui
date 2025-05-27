@@ -6,7 +6,7 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Next Shadcn',
+  title: 'Next App',
   description: 'A modern Next.js application with Shadcn UI',
   icons: {
     icon: '/image.png',

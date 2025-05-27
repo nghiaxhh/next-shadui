@@ -7,7 +7,7 @@ export function Header() {
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex">
           <Link href="/login" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">Next Shadcn</span>
+            <span className="font-bold">Next</span>
           </Link>
           <nav className="flex items-center space-x-6 text-sm font-medium">
             <Link href="/" className="transition-colors hover:text-foreground/80 text-foreground">

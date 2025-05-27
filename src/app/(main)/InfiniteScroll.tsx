@@ -6,7 +6,7 @@ import { useThrottle } from '@/hooks/useThrottle'
 
 export default function InfiniteScroll() {
   const [data, setData] = useState<any[]>([])
-  const [page, setPage] = useState(10)
+  const [page, setPage] = useState(Math.floor(Math.random() * 10))
   const [loading, setLoading] = useState(false)
   const [isInitialLoading, setIsInitialLoading] = useState(true)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -55,7 +55,7 @@ export default function InfiniteScroll() {
 
     const { scrollTop, scrollHeight, clientHeight } = containerRef.current
     // Tải thêm khi đã cuộn đến cuối cùng
-    if (Math.ceil(scrollTop + clientHeight) >= scrollHeight * 0.8 && !loading) {
+    if (Math.ceil(scrollTop + clientHeight) >= scrollHeight * 0.7 && !loading) {
       fetchData(page + 1)
     }
   }, 0)
@@ -102,34 +102,37 @@ export default function InfiniteScroll() {
   }
 
   return (
-    <div className="relative">
-      <div ref={containerRef} className="overflow-y-auto max-h-[600px]" onScroll={handleScroll}>
+    <>
+      <div
+        ref={containerRef}
+        className="overflow-y-auto max-h-[calc(100dvh-140px)]"
+        onScroll={handleScroll}
+      >
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 p-4">
           {columnData.map((column, columnIndex) => (
             <div key={columnIndex} className="flex flex-col gap-4">
-              {column.map((image: any) => (
-                <div key={image.id} className="relative">
-                  <Image
-                    src={image.download_url}
-                    alt={image.author}
-                    width={300}
-                    height={300}
-                    className="w-full h-auto object-cover rounded-lg"
-                  />
-                </div>
+              {column.map((image: any, index: number) => (
+                <Image
+                  key={`${image.author}-${image.id}-${index + 1}`}
+                  src={image.download_url}
+                  alt={image.author}
+                  width={300}
+                  height={300}
+                  className="w-full h-auto object-cover rounded-lg"
+                />
               ))}
             </div>
           ))}
         </div>
       </div>
-      {loading && (
+      {/* {loading && (
         <div className="bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg">
           <div className="flex items-center gap-2">
             <div className="animate-spin rounded-full h-5 w-5 border-2 border-gray-200 border-t-blue-600"></div>
             <span className="text-sm text-gray-600">Đang tải thêm ảnh...</span>
           </div>
         </div>
-      )}
-    </div>
+      )} */}
+    </>
   )
 }

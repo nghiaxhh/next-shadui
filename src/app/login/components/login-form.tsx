@@ -75,7 +75,7 @@ export default function LoginForm() {
           />
           <Button
             type="submit"
-            className="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-2 rounded-lg font-bold shadow-lg hover:scale-105 transition-transform duration-200"
+            className="w-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white py-2 rounded-lg font-bold shadow-lg hover:cursor-pointer transition-transform duration-200"
           >
             Submit
           </Button>

@@ -3,7 +3,7 @@ import { ModeToggle } from '@/components/mode-toggle'
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full flex justify-center border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full h-[60px] flex justify-center border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center">
         <div className="mr-4 flex">
           <Link href="/login" className="mr-6 flex items-center space-x-2">
@@ -20,10 +20,10 @@ export function Header() {
               About
             </Link>
             <Link
-              href="/blog"
+              href="/market"
               className="transition-colors hover:text-foreground/80 text-foreground/60"
             >
-              Blog
+              Market
             </Link>
           </nav>
         </div>

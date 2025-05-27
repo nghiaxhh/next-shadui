@@ -81,9 +81,11 @@
 
 @keyframes rightToLeft {
   from {
+    border-radius: 100px 16px 16px 100px;
     transform: translateX(0);
   }
   to {
+    border-radius: 16px 100px 100px 16px;
     transform: translateX(-100%);
   }
 }
@@ -94,9 +96,11 @@
 
 @keyframes leftToRight {
   from {
+    border-radius: 16px 100px 100px 16px;
     transform: translateX(-100%);
   }
   to {
+    border-radius: 100px 16px 16px 100px;
     transform: translateX(0);
   }
 }

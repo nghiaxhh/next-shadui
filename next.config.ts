@@ -11,6 +11,20 @@ const nextConfig: NextConfig = {
         pathname: '/extensions/**',
         search: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+        port: '',
+        pathname: '/id/**',
+        search: '',
+      },
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+        port: '',
+        pathname: '/images/**',
+        search: '',
+      },
     ],
   },
 }
